@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.njwpdi.modules.zk.dao.ZkDao">
+
+    <select id="getByPrjId" resultType="com.njwpdi.modules.zk.entity.ZkEntity">
+        select * from ZK where PRJ_ID = #{prjId}
+    </select>
+
+    <delete id="deleteByPrjId">
+        delete from ZK where PRJ_ID in
+        <foreach collection="array" separator="," open="(" close=")" item="prjId">
+            #{prjId}
+        </foreach>
+    </delete>
+
+    <!--    <insert id="saveKance" parameterType="com.njwpdi.modules.app.entity.KanceEntity1">-->
+    <!--        insert into KANCE(prj_name,prj_time,landform,land_overview,zk_qty,zk_start,zk_end,prj_num,river,area)-->
+    <!--        values (#{prjName},#{prjTime},#{landform},#{landOverview},#{zkQty},#{zkStary},#{zkEnd},#{prjNum},=#{river},area=#{area})-->
+    <!--    </insert>-->
+
+    <insert id="saveExcel">
+        insert into ZK
+        (zk_num,zk_pos,zk_elv,zk_dep,zk_num,zk_dsp,prj_id,prj_name)
+        values
+        <foreach collection ="list" item="item" index= "index" separator =",">
+         (
+         #{item.zkNum},
+         #{item.zkPos},
+         #{item.zkElv},
+         #{item.zkDep},
+         #{item.zkDsp},
+         #{item.prjId},
+         #{item.prjName}
+         )
+        </foreach>
+    </insert>
+
+</mapper>

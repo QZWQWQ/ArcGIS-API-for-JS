@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.njwpdi.modules.kance.dao.KanceDao">
+
+    <!--    <insert id="saveKance" parameterType="com.njwpdi.modules.app.entity.KanceEntity1">-->
+    <!--        insert into KANCE(prj_name,prj_time,landform,land_overview,zk_qty,zk_start,zk_end,prj_num,river,area)-->
+    <!--        values (#{prjName},#{prjTime},#{landform},#{landOverview},#{zkQty},#{zkStary},#{zkEnd},#{prjNum},=#{river},area=#{area})-->
+    <!--    </insert>-->
+
+    <!--    <delete id="deleteBatch">-->
+    <!--        delete from KANCE where kanceIds = #{id}-->
+    <!--    </delete>-->
+
+    <!--    <update id="update" parameterType="com.njwpdi.modules.app.entity.KanceEntity1">-->
+    <!--        update KANCE set prj_name=#{prjName},prj_time=#{prjTime},landform=#{landform},land_overview=#{landOverview},zk_qty=#{zkQty},zk_start=#{zkStart},zk_end=#{zkEnd},prj_num=#{prjNum},river=#{river},area=#{area}-->
+    <!--        where id=#{id}-->
+    <!--    </update>-->
+
+    <!--    <select id="queryKanceList" resultType="com.njwpdi.modules.app.entity.KanceEntity1">-->
+    <!--        select * FROM KANCE where 1=1-->
+    <!--    </select>-->
+
+    <!--    <select id="queryByPrjName" resultType="com.njwpdi.modules.app.entity.KanceEntity1">-->
+    <!--        select * from KANCE where prjName = #{prjName}-->
+    <!--    </select>-->
+
+    <!--    <select id="queryByName" resultType="com.njwpdi.modules.app.entity.KanceEntity1" parameterType="com.njwpdi.modules.app.entity.KanceEntity1">-->
+    <!--        select * from KANCE where kancename = #{prjName}-->
+    <!--    </select>-->
+</mapper>
